@@ -1,0 +1,1445 @@
+@font-face {
+    font-family: 'FAMILY_NAME';
+    font-style: NORMAL_OR_ITALIC;
+    font-weight: NUMERIC_WEIGHT_VALUE;
+    font-display: swap;
+    src: url(FONT_FILE_NAME.woff2) format('woff2');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root,
+[data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-indigo-1: #220751;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-100-1: #f7f7f7;
+
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-1: #c58bff;
+
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}
+
+body {
+    transition: all .9s ease-in-out;
+}
+
+
+.dark-mode {
+    color-scheme: dark;
+    --bs-body-color: #dee2e6;
+    --bs-body-color-rgb: 222, 226, 230;
+    --bs-body-bg: #110525;
+    --bs-body-bg-1: #ffffff;
+    --bs-gray-100-1: #1e0b3d;
+    --bs-indigo-1: #ffffff;
+
+    --bs-body-bg-rgb: 33, 37, 41;
+    --bs-emphasis-color: #fff;
+    --bs-emphasis-color-rgb: 255, 255, 255;
+    --bs-secondary-color: rgba(222, 226, 230, 0.75);
+    --bs-secondary-color-rgb: 222, 226, 230;
+    --bs-secondary-bg: #343a40;
+    --bs-secondary-bg-rgb: 52, 58, 64;
+    --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+    --bs-tertiary-color-rgb: 222, 226, 230;
+    --bs-tertiary-bg: #1f1f25;
+    --bs-tertiary-bg-rgb: 43, 48, 53;
+    --bs-primary-text-emphasis: #6ea8fe;
+    --bs-secondary-text-emphasis: #a7acb1;
+    --bs-success-text-emphasis: #75b798;
+    --bs-info-text-emphasis: #6edff6;
+    --bs-warning-text-emphasis: #ffda6a;
+    --bs-danger-text-emphasis: #ea868f;
+    --bs-light-text-emphasis: #f8f9fa;
+    --bs-dark-text-emphasis: #dee2e6;
+    --bs-primary-bg-subtle: #031633;
+    --bs-secondary-bg-subtle: #161719;
+    --bs-success-bg-subtle: #051b11;
+    --bs-info-bg-subtle: #032830;
+    --bs-warning-bg-subtle: #332701;
+    --bs-danger-bg-subtle: #2c0b0e;
+    --bs-light-bg-subtle: #343a40;
+    --bs-dark-bg-subtle: #1a1d20;
+    --bs-primary-border-subtle: #084298;
+    --bs-secondary-border-subtle: #41464b;
+    --bs-success-border-subtle: #0f5132;
+    --bs-info-border-subtle: #087990;
+    --bs-warning-border-subtle: #997404;
+    --bs-danger-border-subtle: #842029;
+    --bs-light-border-subtle: #495057;
+    --bs-dark-border-subtle: #343a40;
+    --bs-heading-color: inherit;
+    --bs-link-color: #6ea8fe;
+    --bs-link-hover-color: #8bb9fe;
+    --bs-link-color-rgb: 110, 168, 254;
+    --bs-link-hover-color-rgb: 139, 185, 254;
+    --bs-code-color: #e685b5;
+    --bs-border-color: #495057;
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+    --bs-form-valid-color: #75b798;
+    --bs-form-valid-border-color: #75b798;
+    --bs-form-invalid-color: #ea868f;
+    --bs-form-invalid-border-color: #ea868f;
+}
+
+.BGBU-1 {
+    background-color: var(--bs-body-bg-1);
+}
+
+.nav-item {
+    margin: 0px 5px 0px 0px;
+    padding: 0px 5px 4px 0px;
+}
+
+.navbar {
+    background-color: var(--bs-gray-100-1);
+}
+
+.Stay {
+    color: var(--bs-indigo-1);
+}
+
+
+.start-90 {
+    left: 90%;
+    top: 20% !important;
+}
+
+@media (max-width: 595.98px) {
+    .start-90 {
+        display: none;
+    }
+
+    .IMG-2 {
+        display: none;
+    }
+
+    .IMG-3 {
+        display: none;
+    }
+}
+
+.IMG-CARD {
+    width: 60px;
+}
+
+.HOMEIMG {
+    height: 700px;
+    width: 900px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 70px 0px;
+}
+
+.AB-MG {
+    margin-top: 100px;
+}
+
+@media (max-width:992px) {
+
+    .IMG-CARD {
+        width: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    .HOMEIMG {
+        height: 600px;
+        width: 1700px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 70px 0px;
+    }
+
+    .IMG-CARD {
+        width: 40px;
+    }
+}
+
+@media (max-width:576px) {
+    .HOMEIMG {
+        height: 900px;
+        width: 900px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 70px 0px;
+    }
+
+    .AB-MG {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*********************************** */
+
+
+.R-B {
+    background-image: url(./img/about/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position-x: 500px;
+    background-size: contain;
+    position: relative;
+}
+
+.R-B-1 {
+    background-image: url(./img/home/Union\ 6.svg );
+    background-repeat: no-repeat;
+    background-position-y: 1px;
+    background-size: contain;
+
+}
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 778px) {
+
+    .IMG-3 {
+        position: absolute;
+        top: 440px;
+        left: 190px;
+        width: 190px;
+        height: 139px;
+
+
+    }
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .IMG-1 {
+        position: absolute;
+        top: 200px;
+        right: -20px;
+        width: 150px;
+        height: 90px;
+    }
+
+    .IMG-2 {
+        position: absolute;
+        top: 240px;
+        left: -40px;
+        width: 190px;
+        height: 139px;
+        opacity: 1;
+
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+    .IMG-2 {
+        position: absolute;
+        top: 240px;
+        left: -90px;
+        width: 190px;
+        height: 139px;
+        opacity: 1;
+
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .IMG-1 {
+        position: absolute;
+        top: 290px;
+        right: 25px;
+        width: 130px;
+        height: 70px;
+    }
+}
+
+
+.IMG-CARD {
+    width: 40px;
+    height: 70px;
+
+}
+
+.A-BG {
+    background-color: var(--wite-1);
+}
+
+.BG-V {
+    background-color: #4e1d82;
+}
+
+.IMG-5 {
+    position: absolute;
+    bottom: 27%;
+    right: 2%;
+    width: 230px;
+}
+
+.IMG-6 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.IMG-7 {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+.bo-about {
+    bottom: 15% !important;
+    width: 70px;
+}
+
+@media  (max-width: 1200px) {
+    .bo-about {
+        top: 10% !important;
+        width: 60px;
+    }
+
+   
+}
+
+
+
+
+.BG-R {
+    background-image: url(./img/home/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 80%;
+}
+
+.SP-CO {
+    color: #E55EA2;
+}
+
+.BU-A {
+    background-color: #E55EA2;
+}
+
+.TOP-S {
+    color: var(--unnamed-color-2f1952-1) !important;
+}
+
+.SVG-IMG {
+    position: absolute;
+    right: -42%;
+    top: -19%;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+
+/*********************************** */
+/* about */
+.about {
+    margin-top: 95px;
+    background-image: url(./img/home/Union\ 6.svg), url(./img/about/Union\ 7.svg), url(./img/home/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position-x: -317px, 0px, -127px;
+    background-position-y: -163px, 467px, 98%;
+}
+
+.about h2 {
+    font-size: 55px;
+    line-height: 1.6;
+}
+
+.our-story p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 86%;
+}
+
+.image-parent {
+    position: relative;
+    z-index: 1;
+}
+
+.svg {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    top: 182.1px;
+    right: 124px;
+    z-index: 10;
+}
+
+.vision {
+    width: 600px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 130px 100px;
+    background-color: var(--color-f0eb5b);
+    border-radius: 10px;
+    margin-left: 60px;
+    position: relative;
+}
+
+.vision h2 {
+    color: black;
+}
+
+.pins {
+    position: absolute;
+    left: -27%;
+    top: 12%;
+}
+
+.vision h2 {
+    font-size: 50px;
+}
+
+.vision p {
+    font-size: 28px;
+}
+
+.misson {
+    margin-left: 0;
+    background-color: var(--color-3eb6ae);
+    color: white !important;
+}
+
+.misson h2 {
+    color: white;
+}
+
+.shape img {
+    background-color: var(--color-3eb6ae);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.shape2 {
+    margin-left: 70px;
+}
+
+.shape2 img {
+    background-color: var(--color-845ecc);
+    border-radius: 10px;
+    padding: 20px 10px 20px 30px;
+}
+
+.values {
+    height: 450px;
+    position: relative;
+}
+
+.shape3 img {
+    background-color: var(--color-f0eb5b);
+    border-radius: 10px;
+    padding: 26px 26px 0;
+}
+
+.control {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 150px 100px;
+    background-color: var(--color-e55ea2);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.btn-yellow {
+    background-color: var(--color-f0eb5b);
+    padding: 10px 32px;
+}
+
+.btn-yellow a {
+    color: var(--color-593a89);
+    font-weight: 600;
+}
+
+.control h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.value-shapes {
+    padding: 150px;
+}
+
+.content-text {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.content-text p {
+    color: #CCCDCF !important;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.triangles {
+    position: absolute;
+    right: -77px;
+    top: 111px;
+}
+
+.provider h2 {
+    color: var(--black);
+}
+
+.figure-caption {
+    color: var(--black) !important;
+    font-size: 30px !important;
+}
+
+/* Our services */
+.service {
+    background-image: url(./img/home/Union\ 6.svg), url(./img/about/Union\ 7.svg), url(./img/about/Union\ 6.svg), url(./img/home/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position-x: -33px, -33px, -33px, -33px;
+    background-position-y: -163px, 467px, 74%, 116%;
+
+}
+
+.issuning.first {
+    margin-top: 85px;
+}
+
+.issuning h2 {
+    font-size: 55px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.issuning p {
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 74%;
+}
+
+.shapes {
+    position: relative;
+    margin-left: 150px;
+}
+
+.shapes .sim,
+.shapes .triangular {
+    position: absolute;
+    padding: 35px;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.shapes .sim {
+    background-color: #FCE86D;
+    left: -155px;
+    top: 60px;
+}
+
+.shapes .triangular {
+    left: 51%;
+    top: 40%;
+}
+
+.shapes-compare {
+    margin-left: 126px;
+}
+
+.shapes .correct {
+    position: absolute;
+    top: 28%;
+    left: 17%;
+    z-index: 2;
+    background-color: var(--color-3eb6ae);
+    border-radius: 10px;
+}
+
+.shapes-compare .sim {
+    background-color: var(--color-e55ea2);
+}
+
+.shapes-compare .shape2 {
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    z-index: -1;
+}
+
+.shapes.browesing .correct {
+    left: 37%;
+    top: 36%;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+.shapes.browesing .sim,
+.shapes.preview .sim {
+    left: -183px;
+    top: 108px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.violet-mobile {
+    left: -100px !important;
+    top: 275px !important;
+}
+
+.violet-circle {
+    left: 110px !important;
+}
+
+.dots {
+    left: 47%;
+    top: 47%;
+}
+
+.circle {
+    left: 97px;
+    top: 122px;
+    z-index: 1;
+    padding: 12px;
+}
+
+.home .R-B {
+    background-image: url(./img/home/Union\ 6.svg), url(./img/about/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position-x: -116px, 334px;
+    background-position-y: -163px, -257px;
+    background-size: auto;
+}
+
+/*********************************** */
+/*********************************** */
+/* blog */
+.blog {
+    background-image: url(./img/about/Union\ 7.svg );
+    background-repeat: no-repeat;
+    background-position-x: 120px;
+    background-position-y: -295px;
+    background-size: 83%;
+}
+
+
+
+.blog h1 {
+    font-size: 60px;
+    font-weight: 400 !important;
+}
+
+.blog-text {
+    background-color: var(--color-f6f2fa);
+    font-size: 13px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*********************************** */
+/* blog-page */
+.blog-page {
+    background-image: url(./img/home/Union\ 7.svg), url(./img/blogs/blog-detail/Union\ 5.svg), url(./img/home/Union\ 6.svg), url(./img/home/Union\ 6.svg);
+    background-repeat: no-repeat;
+    background-position-x: -49px, 72px, 171px, -219px;
+    background-position-y: 381px, 70%, 80%, 107%;
+    background-size: 81%, 36%, 81%, 81%;
+    ;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    margin: 0 !important;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    align-items: center;
+    height: 400px;
+}
+
+.small-card-text {
+    color: #6E6E6E;
+    font-size: 15px;
+}
+
+/*********************************** */
+/* waiting list */
+.waiting {
+    background-image: url(./img/about/Union\ 7.svg), url(./img/blogs/blog-detail/Union\ 5.svg), url(./img/home/Union\ 6.svg);
+    background-repeat: no-repeat;
+    background-position-x: -440px, 84%, -114px;
+    background-position-y: -316px, 13%, 250%;
+    background-size: 83%, 39%, 69%;
+}
+
+.waiting input {
+    height: 50px !important;
+}
+
+.waiting label,
+.interest {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.reasons {
+    height: 65px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px dashed #D9CCE6;
+    border-radius: 92px;
+    font-size: 22px;
+    color: #6A7081;
+}
+
+.sent {
+    height: 65px;
+    background: #3EB6AE 0% 0% no-repeat padding-box;
+    border-radius: 37px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.tri {
+    top: 46px;
+    left: 17%;
+}
+
+.violet-pin {
+    top: 29%;
+    right: 10%;
+}
+
+/*********************************** */
+/* footer */
+.subscribe {
+    border: 1px solid var(--tell-2) !important;
+}
+
+.icon-link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 18px 30px #553d8433;
+    padding: 5px 9px;
+    margin: 0 5px;
+}
+
+.BG-C {
+    background-color: var(--bs-gray-100-1);
+}
+
+.R-B-3 {
+    background-image: url(./img/home/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 179px;
+    background-size: contain;
+
+}
+
+.R-B-4 {
+    background-image: url(./img/home/Union\ 6.svg);
+    background-repeat: no-repeat;
+
+    background-position-x: -390px;
+    background-position-y: -80px;
+}
+
+.R-B-5 {
+    background-image: url(./img/home/Union\ 6.svg);
+    background-repeat: no-repeat;
+
+    background-position: right,
+
+
+
+}
+
+
+
+.IMG-8 {
+    position: absolute;
+    top: 120%;
+    right: -50%;
+}
+
+.IMG-9 {
+    position: absolute;
+    top: 60%;
+    right: -70%;
+}
+
+.IMG-10 {
+    position: absolute;
+    top: 10%;
+    left: -20%;
+}
+
+.IMG-11 {
+    position: absolute;
+    top: 10%;
+    left: -80%;
+}
+
+.union-6 {
+    background-image: url(./img/Union\ 6.svg), url(./img/Union\ 12.svg), url(./img/Union\ 13.svg);
+    background-size: auto;
+
+    background-position-x: -250px, 400px, -100px;
+    background-position-y: -350px, -450px, -10px;
+
+}
+
+.union-12 {
+    background-image: url(./img/Union\ 12.svg), url(./img/Union\ 15.svg);
+
+
+    background-position-x: -100px, 450px;
+    background-position-y: 72%, 390px;
+
+}
+
+.P-O {
+    color: #873998;
+    text-align: center;
+}
+
+
+.CARD-s {
+    position: absolute;
+    top: -250px;
+    left: 50px;
+    font-size: 24px;
+    width: 320px;
+}
+
+.CARD-s-1 {
+    position: absolute;
+    top: -250px;
+    left: 60px;
+    font-size: 24px;
+    width: 320px;
+}
+
+
+/*********************************** */
+.subscribe {
+    border: solid 1px violet;
+}
+
+.icon-link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 18px 30px #553d8433;
+    padding: 5px 9px;
+    margin: 0 5px;
+}
+
+.BG-C {
+    background-color: var(--color-card);
+}
+
+.R-B-3 {
+    background-image: url(./img/home/Union\ 7.svg);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 179px;
+    background-size: contain;
+
+}
+
+.R-B-4 {
+    background-image: url(./img/home/Union\ 6.svg);
+    background-repeat: no-repeat;
+
+    background-position-x: -390px;
+    background-position-y: -80px;
+}
+
+.R-B-5 {
+    background-image: url(./img/home/Union\ 6.svg);
+    background-repeat: no-repeat;
+
+    background-position: right,
+
+
+
+}
+
+
+
+.IMG-8 {
+    position: absolute;
+    top: 120%;
+    right: -50%;
+}
+
+.IMG-9 {
+    position: absolute;
+    top: 60%;
+    right: -70%;
+}
+
+.IMG-10 {
+    position: absolute;
+    top: 10%;
+    left: -20%;
+}
+
+.IMG-11 {
+    position: absolute;
+    top: 10%;
+    left: -80%;
+}
+
+.union-6 {
+    background-image: url(./img/Union\ 6.svg), url(./img/Union\ 12.svg), url(./img/Union\ 13.svg);
+    background-size: auto;
+
+    background-position-x: -250px, 400px, -100px;
+    background-position-y: -350px, -450px, -10px;
+
+}
+
+.union-12 {
+    background-image: url(./img/Union\ 12.svg), url(./img/Union\ 15.svg);
+
+
+    background-position-x: -100px, 450px;
+    background-position-y: 72%, 390px;
+
+}
+
+.P-O {
+    color: #873998;
+    text-align: center;
+}
+
+
+.CARD-s {
+    position: absolute;
+    top: -250px;
+    left: 50px;
+    font-size: 24px;
+    width: 320px;
+}
+
+.CARD-s-1 {
+    position: absolute;
+    top: -250px;
+    left: 60px;
+    font-size: 24px;
+    width: 320px;
+}
+
+.TOP-S {
+    color: var(--bs-blue);
+}
+/*@media/////////////////  */
+@media (max-width: 1491.98px) {}
+
+/* @media /////////////*/
+@media (max-width: 1024.98px) {
+
+    .IMG-5 {
+        position: absolute;
+        bottom: 22%;
+        right: 1%;
+    }
+
+    .IMG-6 {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+
+    .IMG-7 {
+        position: absolute;
+        top: 46%;
+        left: 10%;
+    }
+
+
+
+    /* about */
+    .our-story p {
+        font-size: 15px;
+    }
+
+    .svg {
+        top: 69px;
+        right: 161px;
+    }
+
+    .vision {
+        margin-left: 0;
+    }
+
+    .shape2 {
+        margin-left: 211px;
+    }
+
+    .value-shapes {
+        padding: 140px 55px;
+    }
+
+    .control {
+        margin-top: 0;
+        padding: 80px 30px;
+
+    }
+
+    /* services */
+    .shapes {
+        margin-left: 15px;
+    }
+
+    .shapes .sim {
+        left: -78px;
+    }
+
+    .shapes .triangular {
+        left: 34%;
+    }
+
+    .shapes-compare .shape2 {
+        right: -5%;
+    }
+
+    .padding-l {
+        padding-left: 100px;
+    }
+
+    .FON-C {
+        font-size: 13px;
+    }
+
+    /* blog */
+    .big-card p {
+        font-size: 12px;
+    }
+
+    .blog-text {
+        padding: 3px;
+        margin-bottom: 3px;
+    }
+
+    /* waiting */
+    .tri {
+        left: 9%;
+    }
+
+    .violet-pin {
+        right: 0;
+    }
+
+    .CARD-s {
+        position: absolute;
+        top: -210px;
+        left: 30px;
+        font-size: 16px;
+        width: 250px;
+    }
+
+    .CARD-s-1 {
+        position: absolute;
+        top: -210px;
+        left: 40px;
+        font-size: 16px;
+        width: 250px;
+    }
+
+
+}
+
+/* @media//////////////////// */
+@media (max-width: 768.5px) {
+
+
+
+
+    .IMG-5 {
+        display: none;
+    }
+
+    .IMG-6 {
+        display: none;
+    }
+
+    .IMG-7 {
+        display: none;
+    }
+
+
+    /* about */
+    .svg {
+        display: none;
+    }
+
+    .vision {
+        margin-left: -82px;
+    }
+
+    .value-shapes {
+        margin-top: 10px;
+    }
+
+    /* services */
+    /* services */
+    .issuning p {
+        max-width: 100%;
+    }
+
+    .shape-col {
+        order: 2;
+    }
+
+    .text-col {
+        order: 1;
+    }
+
+    .padding-l {
+        padding-left: 160px;
+    }
+
+    .shapes {
+        margin-left: 96px;
+        margin-bottom: 10px;
+    }
+
+    .padding-l {
+        padding-left: 10px;
+    }
+
+    .home .IMG-1,
+    .home .IMG-2 {
+        display: none;
+    }
+
+    .IMG-15,
+    .IMG-8,
+    .IMG-9,
+    .IMG-10,
+    .IMG-11 {
+        display: none;
+    }
+
+    /* waiting */
+    .tri {
+        display: none;
+    }
+
+    .violet-pin {
+        display: none;
+    }
+
+    .CARD-s {
+        position: absolute;
+        top: -260px;
+        left: 14px;
+        font-size: 12px;
+        height: 250px;
+        width: 210px;
+        font-size: 14px;
+    }
+
+    .CARD-s-1 {
+        position: absolute;
+        top: -260px;
+        left: 15px;
+        font-size: 12px;
+        height: 250px;
+        width: 210px;
+        font-size: 12px;
+    }
+
+}
+
+/* @media/////////////////// */
+@media (max-width: 650px) {
+
+    .IMG-1 {
+        display: none;
+    }
+
+    .IMG-3 {
+        display: none;
+    }
+
+    .IMG-2 {
+        display: none;
+    }
+
+    .IMG-4 {
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    .SVG-MQ {
+        display: none;
+    }
+
+    /* about */
+    .vision {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .pins {
+        display: none;
+    }
+
+    .misson {
+        margin-bottom: 10px;
+
+    }
+
+    .shape2 {
+        margin-bottom: 20px;
+    }
+
+    .triangles {
+        display: none;
+    }
+
+    .values h2 {
+        font-size: 50px;
+    }
+
+    .control h2 {
+        font-size: 45px;
+    }
+
+    .control button {
+        width: 100% !important;
+    }
+
+    .provider-logo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* services */
+    .shapes .triangular {
+        left: -32%;
+        top: 44%;
+    }
+
+    .shapes-compare .shape2 {
+        right: 72%;
+    }
+
+    .shapes.browesing .correct {
+        left: -34%;
+        transform: rotate(0deg);
+    }
+
+    .shape-col {
+        order: 2;
+    }
+
+    .text-col {
+        order: 1;
+    }
+
+    .service,
+    .home .R-B {
+        background: none;
+    }
+
+    .issuning.first {
+        margin-top: 0px;
+    }
+
+    .lead {
+        font-size: 15px !important;
+    }
+
+    /* waiting list */
+    .textColor2 {
+        font-size: 40px;
+    }
+
+    .reasons {
+        font-size: 14px;
+    }
+
+    .CARD-s {
+        display: none;
+
+    }
+
+    .CARD-s-1 {
+        display: none;
+
+    }
+
+
+}
+
+/* @media//////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
